@@ -1,0 +1,10 @@
+name: wiindur
+displayName: "Wiindur"
+author: vladisaev12
+main: wiindur.Main
+description: '''
+        vladisaev12's first overhaul mod(and the first one in general).
+        the planet Wii(Wii like the console)(short for Wiindur) is an abandoned planet with early technology(steam age alike).'''
+version: "1.0"
+minGameVersion: "146"
+java: true
