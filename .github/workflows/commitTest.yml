@@ -13,7 +13,7 @@ jobs:
         java-version: 17
     - name: Build mod jar
       run: |
-        echo ${ls} && chmod +x gradlew && ./gradlew deploy
+        echo ${GITHUB_WORKSPACE} && chmod +x gradlew && ./gradlew deploy
     - name: Upload built jar file
       uses: actions/upload-artifact@v4
       with:
