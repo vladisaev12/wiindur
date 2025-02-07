@@ -4,7 +4,10 @@
 		{
 			"type": "shell",
 			"label": "Build & Run",
-			"command": ["rm -rf build && ./gradlew deploy && cp ${cwd}/build/libs/wiindur.jar /home/isa/.local/share/Mindustry/mods && /home/isa/vlad/mindustry/Mindustry"]
+			"command": [
+				"rm -rf build && ./gradlew deploy && cp ${cwd}/build/libs/wiindur.jar /home/isa/.local/share/Mindustry/mods && /home/isa/vlad/mindustry/Mindustry"
+			],
+			"problemMatcher": []
 		}
 	]
 }
