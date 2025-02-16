@@ -1,5 +1,6 @@
 .vscode
 .vscode/**
+Mindustry.jar
 
 logs/
 /core/assets/mindustry-saves/
@@ -156,3 +157,4 @@ android/libs/
 
 ## linux
 .tags
+Mindustry.jar

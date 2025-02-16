@@ -2,11 +2,9 @@ package wiindur.content;
 
 import static mindustry.type.ItemStack.with;
 
-import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
 import mindustry.content.UnitTypes;
-import mindustry.gen.Sounds;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.type.LiquidStack;
@@ -45,29 +43,25 @@ public class WBlocks {
          hasLiquids = false;
          hasItems = false;
          size = 3;
-         generateEffect = Fx.generatespark;
-         ambientSound = Sounds.smelter;
          ambientSoundVolume = 0.06f;
 
-         consumeLiquid(WLiquids.steam, 0.1f);
+         consumeLiquid(WLiquids.steam, 30f / 60f);
 
          drawer = new DrawMulti(
             new DrawDefault(),
-            // new DrawWarmupRegion(),
             new DrawRegion("-wings"){{
                 rotateSpeed = -4f;
             }}
-            // new DrawLiquidRegion()
-            );
+         );
       }};
 
       steamGenerator = new GenericCrafter("steam-generator"){{
          requirements(Category.crafting, with(Items.copper, 25, Items.lead, 20));
          health = 200;
          size = 2;
-         outputLiquid = new LiquidStack(WLiquids.steam, 12f / 60f);
+         outputLiquid = new LiquidStack(WLiquids.steam, 60f / 60f);
 
-         craftTime = 20f;
+         craftTime = 30f;
          hasLiquids = true;
          hasPower = false;
 
@@ -76,17 +70,13 @@ public class WBlocks {
       }};
 
       coreWild = new CoreBlock("core-wild"){{
-         requirements(Category.effect, with(Items.copper, 1000, Items.lead, 800));
-            alwaysUnlocked = true;
-
-            isFirstTier = true;
-            unitType = UnitTypes.alpha;
-            health = 1100;
-            itemCapacity = 4000;
-            size = 3;
-            buildCostMultiplier = 2f;
-
-            unitCapModifier = 32;
+         requirements(Category.effect, with(Items.graphite, 800));
+			size = 3;
+			health = 2000;
+			alwaysUnlocked = true;
+			unitType = UnitTypes.alpha;
+			itemCapacity = 1000;
+			unitCapModifier = 12;
       }};
    }
 }
